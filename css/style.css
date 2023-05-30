@@ -1,0 +1,506 @@
+@font-face {
+     font-family: pt;
+     src: url(../fonts/ProximaNovaT-Thin.woff2);
+     /* font-weight: 100; */
+     font-display: swap;
+}
+
+/* @font-face {
+     font-family: proxima;
+     src: url(../fonts/ProximaNova-Bold.woff2);
+     font-weight: 700;
+     font-display: swap;
+} */
+
+@font-face {
+     font-family: pr;
+     src: url(../fonts/ProximaNova-Regular.woff2);
+     /* font-weight: 400; */
+     font-display: swap;
+}
+
+@font-face {
+     font-family: pb;
+     src: url(../fonts/ProximaNova-Bold.woff2);
+     /* font-weight: 700; */
+     font-display: swap;
+}
+
+@font-face {
+     font-family: mpr;
+     src: url(../font-families/MYRIADPRO-REGULAR.OTF);
+     /* font-weight: 700; */
+     font-display: swap;
+}
+
+
+
+
+::before,
+::after {
+     margin: 0;
+     box-sizing: border-box;
+}
+
+a {
+     text-decoration: none;
+}
+
+ul {
+     list-style: none;
+     padding: 0;
+}
+
+img {
+     vertical-align: bottom;
+}
+
+button {
+     cursor: pointer;
+     padding: 0;
+}
+
+:disabled {
+     cursor: not-allowed;
+}
+
+abbr[title] {
+     cursor: help;
+}
+
+p {
+     margin: 0;
+}
+
+iframe {
+     border: none;
+}
+
+label {
+     display: inline-block;
+}
+
+html {
+     font-size: 15px;
+}
+
+.cardimageshower img {
+     width: 50px;
+     height: 17px;
+     margin-left: 20px;
+}
+
+
+
+body {
+     font: 16px proxima, sans-serif;
+     height: 100vh;
+}
+
+.thin {
+     font-weight: 100;
+     margin: auto;
+     padding: 0 1rem;
+}
+
+.row {
+     display: flex;
+     flex-flow: row wrap;
+     margin: 0 -1rem;
+}
+
+.container {
+     max-width: 1220px;
+     margin: auto;
+     padding: 0 1rem;
+     box-sizing: border-box;
+}
+
+[class^="col-"] {
+
+     flex: 1 0 auto;
+     padding: 0 1rem;
+     box-sizing: border-box;
+     padding-bottom: 10px;
+}
+
+
+
+.col-1 {
+     flex-basis: 8.33%;
+     max-width: 8.33%;
+}
+
+.col-2 {
+     flex-basis: 16.66%;
+     max-width: 16.66%;
+}
+
+.col-3 {
+     flex-basis: 25%;
+     max-width: 25%;
+}
+
+.col-4 {
+     flex-basis: 33.33%;
+     max-width: 33.33%;
+}
+
+.col-5 {
+     flex-basis: 41.66%;
+     max-width: 41.66%;
+}
+
+.col-6 {
+     flex-basis: 50%;
+     max-width: 50%;
+}
+
+.col-7 {
+     flex-basis: 58.33%;
+     max-width: 58.33%;
+}
+
+.col-8 {
+     flex-basis: 66.66%;
+     max-width: 66.66%;
+}
+
+.col-9 {
+     flex-basis: 75%;
+     max-width: 75%;
+}
+
+.col-10 {
+     flex-basis: 83.33%;
+     max-width: 83.33%;
+}
+
+.col-11 {
+     flex-basis: 91.66%;
+     max-width: 91.66%;
+}
+
+.col-12 {
+     flex-basis: 100%;
+     max-width: 100%;
+}
+
+.flex {
+     display: flex;
+}
+
+.justify-right {
+     justify-content: right;
+}
+
+.align-center {
+     align-items: center;
+}
+
+.regform {
+     background-color: red;
+
+}
+
+.hello {
+     margin-top: 20px;
+}
+
+
+
+.paycontainer {
+     max-width: 845px;
+     margin: auto;
+     background-color: purple;
+     padding: 3rem 4rem;
+
+}
+
+.col-6.left {
+     border-right: 1px solid white;
+     border-right: 4px solid purple;
+     background-color: white;
+
+}
+
+.col-6.right {
+     border-right: 1px solid green;
+     background-color: white;
+}
+
+.regform label {
+     display: block;
+}
+
+.regform input {
+     margin: 5px 0px;
+     border: 2px solid purple;
+     width: 95%;
+     outline: none;
+     padding: 5px;
+     display: block;
+     text-transform: capitalize;
+     font-size: 15px;
+}
+
+.zipcode input {
+     height: 16px;
+     margin-left: 10px;
+     padding: 5px;
+     margin: 0 0 0 10px;
+     width: 85%;
+}
+
+.zipcode label {
+     position: relative;
+     left: 11px;
+}
+
+.regform select {
+     padding: 5px;
+     background-color: white;
+     border: 2px solid purple;
+}
+
+.d-flex {
+     display: flex;
+}
+
+.cardimages img {
+     width: 30px;
+     height: 30px;
+     margin-bottom: 10px;
+     padding-top: 2px;
+}
+
+.cardimages p {
+     margin: 0;
+}
+
+.yearandcvv input {
+     margin: 5px 0px;
+
+}
+
+.yearandcvv select {
+     margin: 5px 0px;
+     padding-bottom: 7px;
+}
+
+.chkbutton button {
+     width: 100%;
+     height: 32px;
+     background-color: purple;
+     color: white;
+     border-radius: 9px;
+     border: 1px solid pink;
+     font-weight: 800;
+     text-transform: capitalize;
+     font-size: 15px;
+}
+
+.chkbutton {
+     margin-top: 18px;
+}
+
+.inputerror {
+     margin-left: 20px;
+     color: red;
+     text-transform: capitalize;
+     font-size: 14px;
+}
+
+.yearandcvv {
+     margin-top: 5px;
+}
+
+.indianstates {
+     width: 90%;
+}
+
+.mygk {
+     font-family: pb;
+}
+
+.lack {
+
+     background: linear-gradient(to right, rgba(255, 0, 0, 0.5) 50%, rgba(0, 255, 0, 0.5)), url("../img/Picks/IMG_20181027_180536.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     margin-bottom: 200px;
+     height: 630px;
+     color: aliceblue;
+}
+
+.lack img {
+     border-radius: 50%;
+}
+
+.text-center {
+     text-align: center;
+}
+
+
+
+/* .circle {
+     position: relative;
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     background-color: #ffd17e;
+     overflow: hidden;
+     position: absolute;
+     top: 0px;
+     right: 40%;
+     overflow: hidden;
+   }
+   
+   .circle::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: repeating-linear-gradient(
+       135deg,
+       #ffd17e,
+       #ffd17e 5px,
+       #ffd17e 4px,
+       white 5px,
+       white 10px
+     );
+   }
+    */
+
+
+@media screen and (max-width:767px) {
+     .col-sm-6 {
+          flex-basis: 100%;
+          max-width: 100%;
+     }
+
+     .paycontainer {
+          padding: 1rem 2rem;
+     }
+
+     .col-6.left,
+     .col-6.right {
+          border-right: 0px;
+     }
+}
+
+.monthsss {
+     text-transform: uppercase;
+     text-align: center;
+     margin-top: 6px;
+}
+
+.kpo ul {
+     display: flex;
+}
+
+.kpo ul li {
+     margin-right: 5px;
+}
+
+.kpo ul li a {
+     display: block;
+     padding: 10px
+}
+
+@media screen and (max-width:360px) {
+
+     .yearandcvv,
+     .stateandzip {
+          flex-direction: column;
+     }
+
+     .deo {
+          width: 172px;
+          position: relative;
+          left: 14px;
+     }
+
+     .zipcode {
+          position: relative;
+          left: -10px;
+          top: 8px;
+     }
+}
+
+.container {
+     overflow: hidden;
+}
+
+.container.mg {
+
+     background: linear-gradient(to right, rgb(13, 20, 30, 0.8), rgb(13, 20, 30, 0.8)), url(../img/Picks/onlyimage.jpg);
+     color: white;
+
+     background-size: cover;
+     position: relative;
+     background-repeat: no-repeat;
+
+
+}
+
+.myig {
+     height: 395px;
+}
+
+/* .imageway {
+     padding-bottom: 1px;
+} */
+
+.imageway img {
+     border-radius: 50%;
+     width: 245px;
+     height: 245px;
+     display: inline-block;
+     position: relative;
+     left: 50%;
+     transform: translate(-50%, 0%);
+     top: 150px;
+
+}
+
+
+
+
+.comments {
+     margin: 0;
+     text-align: center;
+     /* display: flex; */
+     justify-content: center;
+     font-family: mpr;
+}
+
+.comments .detailh {
+     /* margin: 0;
+     margin-top: 35px; */
+     /* text-align: center; */
+     font-size: 41.67px;
+     /* font-weight: 400;1 */
+     margin-top: 39px;
+     margin-bottom: 36.5px;
+     /* margin-left: 184px; */
+     /* margin-right: 195px; */
+     width: 88.48%;
+     margin: auto;
+     margin-top: 44px;
+     margin-bottom: 36.5px;
+     font-size: 2.778rem;
+}
+
+.pok {
+     font-size: 2.93rem;
+     margin-bottom: 140px;
+}
+@media screen and (max-width:767px) {
+     html{
+          font-size: 10px;
+     }
+    
+}

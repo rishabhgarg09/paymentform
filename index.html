@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="img/Picks/paymenticon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+     
+</head>
+
+<body>
+    <main>
+        <div class="mainpaycontainer">
+            <form action="#" class="regform paycontainer" name="paymentform" autocomplete="off">
+                <div class="row">
+                    <div class="col-6 col-sm-6 left">
+                        <h2 class="billingaddress">Billing Address</h2>
+                        <label for="fullname" class="mygk">Full Name<b><span
+                                    class="inputerror efullname"></span></b></label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Enter Your Full Name" value=""
+                            required class="pastestop">
+                        <label for="Email">Email<b><span class="inputerror eemail"></span></b></label>
+                        <input type="text" id="Email" placeholder="Enter Your Email" value="" name="mail"
+                            class="pastestop" required>
+                        <label for="Address">Address<b><span class="inputerror eaddress"></span></b></label>
+                        <input type="text" id="address" class="pastestop" placeholder="Enter Your Address">
+                        <label for="City">City<b><span class="inputerror ecity"></span></b></label>
+                        <input type="text" id="City" placeholder="Enter Your City " class="pastestop" required
+                            name="city">
+                        <div class="stateandzip d-flex">
+                            <div class="state">
+                                <label for="state">State or U.T<b><span class="inputerror estate"></span></b></label>
+                                <select name="" id="state required" class="indianstates" required>
+                                    <option value="" selected disabled>Selcct state or U.T</option>
+
+                                </select>
+                            </div>
+                            <div class="zipcode deo ">
+
+                                <label for="zipcode">Zip Code<b><span class="inputerror ezipcode"></span></b></label>
+                                <input type="text" placeholder="Zip code" name="zipcode" class="stopenum pastestop"
+                                    class="pastestop" maxlength="6" minlength="6" required>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-6 col-sm-6 right">
+                        <h2>Payment Details</h2>
+                        <div class="cardimages">
+                            <p>Accepted Cards</p>
+                            <img src="img/Picks/rupay.png" alt="">
+                            <img src="img/Picks/maestro.png" alt="">
+                            <img src="img/Picks/mastercard.png" alt="">
+                            <img src="img/Picks/visa.png" alt="">
+                        </div>
+                        <label for="CardNumber">Card Number<span class="cardimageshower"></span><b><span
+                                    class="inputerror ecardnumber"></span></b></label>
+                        <input type="text" id="CardNumber" placeholder="Enter Your Card NUmber" value=""
+                            name="cardnumber" maxlength="23" minlength="12" name="cardnumber"
+                            class="stopexcnumspa cardnumber pastestop">
+                        <label for="ExpMonth">Exp Month<b><span class="inputerror eexpmonth"></span></b></label>
+                        <!-- <input type="text" id="ExpMonth" placeholder="Expire Month" value="" name="expmonth" required> -->
+                        <select style="width:100%" name="" id="" class="monthsss">
+                            <option value="" selected disabled>select month</option>
+                            <option value="">january</option>
+                            <option value="">february</option>
+                            <option value="">march</option>
+                            <option value="">aprail</option>
+                            <option value="">may</option>
+                            <option value="">june</option>
+                            <option value="">july</option>
+                            <option value="">august</option>
+                            <option value="">september</option>
+                            <option value="">october</option>
+                            <option value="">november</option>
+                            <option value="">december</option>
+                        </select>
+                        <div>
+                            <div class="row yearandcvv">
+                                <div style="margin: 0 15px">
+                                    <label for="ExpYear">Exp Year<b><span
+                                                class="inputerror eexpyear"></span></b></label>
+                                    <select name="expyear" id="expyear" class="expyear" required>
+                                        <option value="" selected disabled>Select Year</option>
+                                    </select>
+                                </div>
+                                <div class="deo" style="width: 172px">
+                                    <label for="cvv">C.V.V<b><span class="inputerror ecvv"></span></b></label>
+                                    <input id="cvv" placeholder="C.V.V" class="stopenum pastestop" value="" name="cvv"
+                                        minlength="3" maxlength="3" required>
+                                </div>
+                            </div>
+
+                            <div class="chkbutton">
+                                <button type="submit">
+                                    proceed to checkout
+                                </button>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div class="huo"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(".stopenum").on("input", function () {
+            this.value = this.value.replace(/\D/, '').replace(/^\s/, '').replace(/\s{2,}/, ' ');
+        });
+        $("#address").on("input", function () {
+            this.value = this.value.replace(/[^\w\s-/,\\]/, '').replace(/^\s/, '').replace(/\s{2,}/, ' ');
+        });
+        $("#City").on("input", function () {
+            this.value = this.value.replace(/[^a-zA-Z-\s]/, '').replace(/^\s/, '').replace(/\s{2,}/, ' ');
+        });
+        $("#fullname").on("input", function () {
+            this.value = this.value.replace(/[^a-zA-Z\s]/, '').replace(/^\s/, '').replace(/\s{2,}/, ' ');
+        });
+        $("#Email").on("input", function () {
+            this.value = this.value.replace(/^\s/, '').replace(/\s{2,}/, ' ');
+        });
+        $(".pastestop").on("paste", function (e) {
+
+            e.preventDefault();
+            alert("copy and paste not allowed here");
+        });
+        // function for below logic
+        function cardimagedisplay(imgsrcwithtag) {
+            $(".cardimageshower").html('');
+            $(".cardimageshower").html(imgsrcwithtag);
+        }
+        var rupayreg = /6[0-9]{3}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}/
+        var masterreg = /^5[1-5][0-9]{2}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}$/
+        // not sure
+        var visareg = /^4[0-9]{3}\s[0-9]{4}\s[0-9]{4}\s[0-9]{1}(?:[0-9]{3})?$/;
+        // only number and space allowed for debit and credit card pattern
+        $(".cardnumber").on("input", function (event) {
+            var inputValue = this.value;
+            var sanitizedValue = inputValue.replace(/\D/g, ''); // Remove non-digit characters
+            var formattedValue = sanitizedValue.replace(/(\d{4})(?=\d)/g, '$1 '); // Add space after every 4 digits
+            this.value = formattedValue; // Update input value to formatted value
+            if (rupayreg.test(formattedValue)) {
+                cardimagedisplay('<img src="img/Picks/rupay.png" class="nji">');
+            }
+            if (masterreg.test(formattedValue)) {
+                cardimagedisplay('<img src="img/Picks/mastercard.png">');
+            }
+            // not sure
+            if (visareg.test(formattedValue)) {
+                cardimagedisplay('<img src="img/Picks/visa.png">');
+            }
+            if (formattedValue.length === 0) {
+                cardimagedisplay('');
+            }
+        });
+        function seterror(targetedelement, innermatter) {
+            document.querySelector(targetedelement).textContent = innermatter;
+        }
+        function clearerror(targetedelement) {
+            document.querySelector(targetedelement).textContent = "";
+        }
+        var mailpatt = /^[a-z0-9]{1}[a-z0-9._]{0,}\@[a-z0-9]{1}[a-z0-9-]{1,}\.[a-z]{2}[a-zA-Z.]{0,}$/i;
+        var regone = new RegExp(/^[A-Za-z]{2,}$/i);
+        var regtwo = new RegExp(/^[A-Za-z]{2,}\s{1}[A-Za-z]{2,}$/i);
+        var regthree = new RegExp(/^[A-Za-z]{2,}\s{1}[A-Za-z]{2,}\s{1}[A-Za-z]{2,}$/i);
+        var regspace = /^\s/;
+        var regcity = /^[A-Za-z\s\-',.()]+$/
+        var regzipcode = /^\d{6}$/;
+        var regcvv = /^\d{3}$/;
+        var regcardnum = /^\d{4}\s{1}\d{4}\s{1}\d{4}\s{1}\d{4}/
+        document.paymentform.addEventListener("submit", function (e) {
+            var returnval = true;
+            clearerror(".efullname");
+            clearerror(".eemail");
+            clearerror(".ecity");
+            clearerror(".ezipcode");
+            clearerror(".ecvv");
+            clearerror(".ecardnumber");
+            if ((regone.test(paymentform.fullname.value.trim()) == false) && (regtwo.test(paymentform.fullname.value.trim()) == false) && (regthree.test(paymentform.fullname.value.trim()) == false)) {
+                seterror(".efullname", "*incorrect name");
+                returnval = false;
+            }
+            if (mailpatt.test(paymentform.mail.value.trim()) == false) {
+                seterror(".eemail", " *incorrect mail");
+                returnval = false;
+            }
+            if (regcity.test(paymentform.city.value.trim()) == false) {
+                seterror(".ecity", " *incorrect city name");
+                returnval = false;
+            }
+            if (regzipcode.test(paymentform.zipcode.value.trim()) == false) {
+                seterror(".ezipcode", "*incorrect pin");
+                returnval = false;
+            }
+            if (regcvv.test(paymentform.cvv.value.trim()) == false) {
+                seterror(".ecvv", "*Not a c.v.v");
+                returnval = false;
+            }
+            if (regcardnum.test(paymentform.cardnumber.value.trim()) == false) {
+                seterror(".ecardnumber", "*Not a valid card number");
+                returnval = false;
+            }
+            if (paymentform.cardnumber.value.trim() == "") {
+                seterror(".ecardnumber", "*this field is must");
+                returnval = false;
+            }
+            if (returnval == false) {
+                e.preventDefault();
+            }
+        })
+        fetch("IndianStates.json").then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not OK");
+            }
+            return response.json();
+        })
+            .then(data => {
+                for (let i in data) {
+                    document.querySelector(".indianstates").innerHTML += `<option value="${data[i]}">${data[i]}</option>`;
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+
+        for (var i = 2023; i <= 2040; i++) {
+            document.querySelector(".expyear").innerHTML += `<option>${i}</option>`;
+        }
+       
+        document.querySelector(".zipcode.deo").addEventListener("click", function () {
+
+            window.scrollBy(0, 200);
+
+        })
+
+    </script>
+</body>
+
+</html>
