@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page allows users to make payments securely.">
     <title>Payment Page</title>
     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
     <link rel="shortcut icon" href="img/Picks/paymenticon.webp" type="image/x-icon">
@@ -52,10 +53,10 @@
                         <h2>Payment Details</h2>
                         <div class="cardimages">
                             <p>Accepted Cards</p>
-                            <img src="img/Picks/rupay.png" alt="">
-                            <img src="img/Picks/maestro.png" alt="">
-                            <img src="img/Picks/mastercard.png" alt="">
-                            <img src="img/Picks/visa.png" alt="">
+                            <img src="img/Picks/rupay.webp" alt="">
+                            <img src="img/Picks/maestro.webp" alt="">
+                            <img src="img/Picks/mastercard.webp" alt="">
+                            <img src="img/Picks/visa.webp" alt="">
                         </div>
                         <label for="CardNumber">Card Number<span class="cardimageshower"></span><b><span
                                     class="inputerror ecardnumber"></span></b></label>
@@ -152,14 +153,14 @@
             var formattedValue = sanitizedValue.replace(/(\d{4})(?=\d)/g, '$1 '); // Add space after every 4 digits
             this.value = formattedValue; // Update input value to formatted value
             if (rupayreg.test(formattedValue)) {
-                cardimagedisplay('<img src="img/Picks/rupay.png" class="nji">');
+                cardimagedisplay('<img src="img/Picks/rupay.webp" class="nji">');
             }
             if (masterreg.test(formattedValue)) {
-                cardimagedisplay('<img src="img/Picks/mastercard.png">');
+                cardimagedisplay('<img src="img/Picks/mastercard.webp">');
             }
             // not sure
             if (visareg.test(formattedValue)) {
-                cardimagedisplay('<img src="img/Picks/visa.png">');
+                cardimagedisplay('<img src="img/Picks/visa.webp">');
             }
             if (formattedValue.length === 0) {
                 cardimagedisplay('');
