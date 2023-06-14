@@ -10,7 +10,7 @@
     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
     <link rel="shortcut icon" href="img/Picks/paymenticon.webp" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-     
+
 </head>
 
 <body>
@@ -27,7 +27,7 @@
                         <label for="Email">Email<b><span class="inputerror eemail"></span></b></label>
                         <input type="text" id="Email" placeholder="Enter Your Email" value="" name="mail"
                             class="pastestop" required>
-                        <label for="Address">Address<b><span class="inputerror eaddress"></span></b></label>
+                        <label for="address">Address<b><span class="inputerror eaddress"></span></b></label>
                         <input type="text" id="address" class="pastestop" placeholder="Enter Your Address">
                         <label for="City">City<b><span class="inputerror ecity"></span></b></label>
                         <input type="text" id="City" placeholder="Enter Your City " class="pastestop" required
@@ -35,16 +35,18 @@
                         <div class="stateandzip d-flex">
                             <div class="state">
                                 <label for="state">State or U.T<b><span class="inputerror estate"></span></b></label>
-                                <select name="" id="state required" class="indianstates" required>
+                                <select   class="indianstates" id="state">
                                     <option value="" selected disabled>Selcct state or U.T</option>
 
                                 </select>
                             </div>
                             <div class="zipcode deo ">
 
-                                <label for="zipcode">Zip Code<b><span class="inputerror ezipcode"></span></b></label>
+                                <!-- <label for="ezipcode">Zip Code<b><span class="inputerror ezipcode"></span></b></label> -->
+                                <label for="myzip">Zip Code <b><span class="inputerror ezipcode"></span></b></label>
+
                                 <input type="text" placeholder="Zip code" name="zipcode" class="stopenum pastestop"
-                                    class="pastestop" maxlength="6" minlength="6" required>
+                                    id="myzip" maxlength="6" minlength="6" required>
                             </div>
                         </div>
 
@@ -61,11 +63,11 @@
                         <label for="CardNumber">Card Number<span class="cardimageshower"></span><b><span
                                     class="inputerror ecardnumber"></span></b></label>
                         <input type="text" id="CardNumber" placeholder="Enter Your Card NUmber" value=""
-                            name="cardnumber" maxlength="23" minlength="12" name="cardnumber"
+                            name="cardnumber" maxlength="23" minlength="12"
                             class="stopexcnumspa cardnumber pastestop">
                         <label for="ExpMonth">Exp Month<b><span class="inputerror eexpmonth"></span></b></label>
                         <!-- <input type="text" id="ExpMonth" placeholder="Expire Month" value="" name="expmonth" required> -->
-                        <select style="width:100%" name="" id="" class="monthsss">
+                        <select style="width:100%" id="ExpMonth" class="monthsss">
                             <option value="" selected disabled>select month</option>
                             <option value="">january</option>
                             <option value="">february</option>
@@ -83,7 +85,7 @@
                         <div>
                             <div class="row yearandcvv">
                                 <div style="margin: 0 15px">
-                                    <label for="ExpYear">Exp Year<b><span
+                                    <label for="expyear">Exp Year<b><span
                                                 class="inputerror eexpyear"></span></b></label>
                                     <select name="expyear" id="expyear" class="expyear" required>
                                         <option value="" selected disabled>Select Year</option>
@@ -239,7 +241,7 @@
         for (var i = 2023; i <= 2040; i++) {
             document.querySelector(".expyear").innerHTML += `<option>${i}</option>`;
         }
-       
+
         document.querySelector(".zipcode.deo").addEventListener("click", function () {
 
             window.scrollBy(0, 200);
